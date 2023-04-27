@@ -1,0 +1,17 @@
+version: "3.2"
+services:
+  webv1:
+    image: nginx:latest
+    ports:
+      - 3000:80
+    volumes:
+      - vol-files:/usr/share/nginx/html
+  webv2:
+    image: nginx:latest
+    ports:
+      - 3001:80
+    volumes:
+      - vol-files:/usr/share/nginx/html
+ 
+volumes:
+  vol-files:
